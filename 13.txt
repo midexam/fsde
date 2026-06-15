@@ -5,7 +5,6 @@ cd state-props-demo
 npm install
 npm run dev
 import React, { Component } from 'react';
-
 class CounterDisplay extends Component {
   render() {
     return (
