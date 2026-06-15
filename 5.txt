@@ -1,5 +1,4 @@
-.Write a NodeJs program to Implement a programwith basic
-commands (CRUD) on databases and collections using MongoDB
+Write a NodeJs program to Implement a programwith basic commands (CRUD) on databases and collections using MongoDB
 mongosh
 show dbs
 use MYDB1
