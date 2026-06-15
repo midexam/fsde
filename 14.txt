@@ -1,0 +1,31 @@
+import React, { useState } from 'react';
+
+function App() {
+    const [email, setEmail] = useState("");
+
+    const validate = () => {
+        if (email.includes("@")) {
+            alert("Valid Email");
+        } else {
+            alert("Invalid Email");
+        }
+    };
+
+    return (
+        <div>
+            <h2>Email Validation</h2>
+
+            <input
+                type="text"
+                placeholder="Enter Email"
+                onChange={(e) => setEmail(e.target.value)}
+            />
+
+            <button onClick={validate}>
+                Check
+            </button>
+        </div>
+    );
+}
+
+export default App;

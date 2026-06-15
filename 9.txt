@@ -1,0 +1,33 @@
+9.	To demonstrate data binding (string interpolation, property binding & class binding) in Angular.
+src/app/app.ts
+import { Component, signal } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+
+@Component({
+  selector: 'app-root',
+  imports: [RouterOutlet],
+  templateUrl: './app.html',
+  styleUrl: './app.css'
+})
+export class App {
+
+  protected readonly title = signal('app');
+
+  // String Interpolation
+  name = 'Chinmayi';
+
+  // Property Binding
+  imageUrl = 'https://angular.dev/assets/images/presskit/angular_icon_gradient.gif';
+
+  // Class Binding
+  isHighlight = true;
+}
+
+src/app/app.html
+<p>Name: {{ name }}</p>
+
+<img [src]="imageUrl" width="100" height="100">
+
+<p [class.highlight]="isHighlight">
+  This is a highlighted text.
+</p>

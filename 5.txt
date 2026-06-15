@@ -1,0 +1,17 @@
+.Write a NodeJs program to Implement a programwith basic
+commands (CRUD) on databases and collections using MongoDB
+mongosh
+show dbs
+use MYDB1
+db.createCollection("students") 
+show collections
+db.students.insertOne({rollno:501,name:"CSE3"}) 
+db.students.insertOne({rollno:502,name:"CSE2"})
+db.students.find().pretty() 
+db.students.updateOne({rollno:502},{$set:{name:"CSE3"}}) 
+db.students.find().pretty() 
+db.students.deleteOne({rollno:501}) 
+db.students.find().pretty() 
+db.students.drop() 
+db.dropDatabase() 
+show dbs

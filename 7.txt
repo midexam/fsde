@@ -1,0 +1,21 @@
+Perform Count, Limit, Sort, and Skip operations on the given collections
+using MongoDB.
+
+mongosh
+use studentdb
+db.students.insertOne({rollno:101,age:18})
+db.students.insertMany([
+{rollno:101,name:"Ravi",marks:85,branch:"CSE"},
+{rollno:102,name:"Priya",marks:92,branch:"ECE"},
+{rollno:103,name:"Kiran",marks:78,branch:"CSE"},
+{rollno:104,name:"Anjali",marks:88,branch:"EEE"},
+{rollno:105,name:"Rahul",marks:95,branch:"CSE"}
+])
+
+db.students.find()
+db.students.countDocuments()
+db.students.find().limit(3)
+db.students.find().sort({marks:1})
+db.students.find().sort({marks:-1})
+db.students.find().skip(2)
+db.students.find().sort({marks:-1}).skip(1).limit(3)
