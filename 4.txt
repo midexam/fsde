@@ -46,7 +46,6 @@ project/
 ├── server.js
 │
 └── html/
-    ├── index.html
-    └── about.html
+    ├── abc.html
 
 node server.js
