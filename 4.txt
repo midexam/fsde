@@ -1,5 +1,4 @@
- Write a Node JS program to demonstrate accessing static files
-using http webserver and client.
+Write a Node JS program to demonstrate accessing static files using http webserver and client.
 
 const http = require('http');
 const fs = require('fs');
