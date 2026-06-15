@@ -2,20 +2,15 @@ Program to demonstrate Applying Route Parameters in Express JS
 const express = require('express');
 const app = express();
 
-// Route with one parameter
 app.get('/student/:id', (req, res) => {
     res.send("Student ID: " + req.params.id);
 });
-
-// Route with two parameters
 app.get('/student/:id/:age', (req, res) => {
     res.send(
         "Student ID: " + req.params.id +
         "\nStudent Age: " + req.params.age
     );
 });
-
-// Start server
 app.listen(5000, () => {
     console.log("Server running at http://localhost:5000");
 });
