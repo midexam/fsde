@@ -12,14 +12,8 @@ import { RouterOutlet } from '@angular/router';
 export class App {
 
   protected readonly title = signal('app');
-
-  // String Interpolation
-  name = 'Chinmayi';
-
-  // Property Binding
-  imageUrl = 'https://angular.dev/assets/images/presskit/angular_icon_gradient.gif';
-
-  // Class Binding
+  name = 'Nousheen';
+  imageUrl = 'https://picsum.photos/200';
   isHighlight = true;
 }
 
