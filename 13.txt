@@ -4,42 +4,36 @@ npm create vite@latest state-props-demo
 cd state-props-demo
 npm install
 npm run dev
+import React, { Component } from 'react';
 
-import React, { useState } from "react";
-
-// Child Component (receives props)
-function Student(props) {
+class CounterDisplay extends Component {
+  render() {
     return (
-        <div>
-            <h2>Student Details</h2>
-            <p>Name: {props.name}</p>
-            <p>Age: {props.age}</p>
-        </div>
+      <h2>Current Count: {this.props.currentCount}</h2>
     );
+  }
 }
 
-// Parent Component
-function App() {
-    // State
-    const [name, setName] = useState("Ravi");
-    const [age, setAge] = useState(20);
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      count: 0
+    };
+  }
 
+  increment = () => {
+    this.setState({ count: this.state.count + 1 });
+  }
+
+  render() {
     return (
-        <div>
-            <h1>React State and Props Demo</h1>
-
-            <button onClick={() => setName("Kiran")}>
-                Change Name
-            </button>
-
-            <button onClick={() => setAge(age + 1)}>
-                Increase Age
-            </button>
-
-            {/* Passing State as Props */}
-            <Student name={name} age={age} />
-        </div>
+      <div>
+        <CounterDisplay currentCount={this.state.count} />
+        <button onClick={this.increment}>INCREMENT</button>
+      </div>
     );
+  }
 }
 
 export default App;
