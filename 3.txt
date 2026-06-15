@@ -1,6 +1,5 @@
 #Write a Node JS program to demonstrate events and call back functions.
 
-
 const EventEmitter = require('events');
 const myEmitter = new EventEmitter();
 function myCallback() {
