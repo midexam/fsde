@@ -1,6 +1,4 @@
-Write an application program to demonstrate two way data binding in
-Angular.
-
+Write an application program to demonstrate two way data binding in Angular.
 src/app/app.ts
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
