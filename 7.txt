@@ -1,6 +1,5 @@
 Perform Count, Limit, Sort, and Skip operations on the given collections
 using MongoDB.
-
 mongosh
 use studentdb
 db.students.insertOne({rollno:101,age:18})
