@@ -1,4 +1,4 @@
-9.	To demonstrate data binding (string interpolation, property binding & class binding) in Angular.
+To demonstrate data binding (string interpolation, property binding & class binding) in Angular.
 src/app/app.ts
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
